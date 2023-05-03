@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% if res %}
+{{res}}
+{% else %}
+<form method="POST">
+  {% csrf_token %}
+
+  <textarea rows="15"  name = tarea> </textarea>
+    <BR>
+  <input type="number"  name="n">
+  <input type="submit" value="losuj">
+</form>
+{% endif %}
+</body>
+</html>
